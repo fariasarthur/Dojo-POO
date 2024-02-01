@@ -13,7 +13,12 @@ class Elevador:
         print('       -||-       ')
         print('  Porta Aberta    ')
         print('-|              -|')
-        print('Andar escolhido: ' + str(self.andar_desejado))
+
+        if self.andar_desejado not in self.pavimentos:
+            print('Esse andar não existe no prédio')
+        
+        else:
+            print('Andar escolhido: ' + str(self.andar_desejado))
 
     def transitar(self):
 
