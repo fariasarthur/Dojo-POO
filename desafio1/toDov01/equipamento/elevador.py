@@ -2,7 +2,8 @@
 class Elevador:
 
     def __init__(self, andar_atual:int, andar_desejado:int):
-        self.num_andar = andar
+        self.andar_atual = andar_atual
+        self.andar_desejado = andar_desejado
         self.pavimentos = [1,2,3,4,5,6,8,9,10,11,12,13,14]
 
     def chamar(self):
@@ -12,16 +13,14 @@ class Elevador:
         print('       -||-       ')
         print('  Porta Aberta    ')
         print('-|              -|')
-        print('Escolha um andar')
-    
-    def escolher_andar(self):
+        print('Andar escolhido: ' + str(self.andar_desejado))
 
     def transitar(self):
 
-        for pavimento in self.pavimentos:
+        if self.andar_atual > self.andar_desejado:
+            print('Elevador descendo para o ' + str(self.andar_desejado) + 'º andar')
 
-            if andar 
-
-        
+        else:
+            print('Elevador subindo para o ' + str(self.andar_desejado) + 'º andar')
     
         
